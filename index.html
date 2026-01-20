@@ -3,20 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Baba Shyam Fruit | Andheri East</title>
-
-<meta name="description" content="Baba Shyam Fruit Shop in Andheri East Mumbai offering fresh and seasonal fruits. Call or WhatsApp for enquiry.">
-<meta name="keywords" content="fruit shop Andheri East, Baba Shyam Fruit, fresh fruits Mumbai">
-<meta name="author" content="Baba Shyam Fruit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header class="logo-header">
-    <img src="images/logo.png" class="logo-img">
-    <p>Fresh & Quality Fruits – Andheri East</p>
+  <img src="images/logo.png" class="logo-img">
+  <p>Fresh & Quality Fruits – Andheri East</p>
 </header>
 
 <div class="festival">
@@ -24,71 +19,185 @@
 </div>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="fruits.html">Fruits</a>
-    <a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="fruits.html">Fruits</a>
+  <a href="categories.html">Categories</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<div class="notice">
-⚠️ Prices are indicative and may change daily based on market rates.
+<!-- IMAGE SLIDER -->
+<section class="slider">
+  <div class="slides"><img src="images/slide1.jpg"></div>
+  <div class="slides"><img src="images/slide2.jpg"></div>
+  <div class="slides"><img src="images/slide3.jpg"></div>
+</section>
+
+<!-- SLIDER TEXT -->
+<section class="slider-text">
+  <div class="text-slide active">
+    <h3>24/7 Customer Support</h3>
+    <p>We are always available to assist you with your fruit requirements.</p>
+  </div>
+  <div class="text-slide">
+    <h3>Free Shipping</h3>
+    <p>Free home delivery available in Andheri East & Jogeshwari East.</p>
+  </div>
+  <div class="text-slide">
+    <h3>Fruit Hampers Available</h3>
+    <p>We also prepare customized fruit hampers. Orders must be placed 2–3 days in advance.</p>
+  </div>
+</section>
+
+<!-- DAILY FRUITS -->
+<section class="daily-section">
+<h2>🍎 Daily Fruits</h2>
+
+<!-- EVERYDAY FRUITS -->
+<div class="category">
+<button onclick="toggleBox('everyday')">Everyday Fruits</button>
+<div class="items" id="everyday">
+
+<div class="item-card">
+<img src="images/apple.png">
+<p>Apple – ₹180/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order on WhatsApp</a>
 </div>
 
-<section class="content">
-    <h2>Welcome to Baba Shyam Fruit</h2>
-    <p>
-        Baba Shyam Fruit Andheri East mein taaza aur quality fruits provide karta hai.  
-        We provide fresh & seasonal fruits for daily and bulk requirements.
-    </p>
+<div class="item-card">
+<img src="images/banana.png">
+<p>Banana – ₹60/dozen</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Banana" class="order-btn">Order on WhatsApp</a>
+</div>
 
-    <a class="whatsapp" href="https://wa.me/917506894309">📲 WhatsApp Enquiry</a>
-</section>
+</div>
+</div>
 
-<section class="reviews">
-    <h2>⭐ Customer Reviews</h2>
-    <div class="review">"Fresh fruits daily. Very good quality." – Ramesh</div>
-    <div class="review">"Best fruit shop in Andheri East." – Sunita</div>
-    <div class="review">"Reasonable rates & good service." – Imran</div>
-</section>
+<!-- IMPORTED FRUITS -->
+<div class="category">
+<button onclick="toggleBox('imported')">Imported Fruits</button>
+<div class="items" id="imported">
 
-<!-- ADD REVIEW FORM -->
-<section id="add-review">
-  <h2>Write Your Review</h2>
-  <form id="reviewForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <textarea id="review" placeholder="Write your review..." required></textarea>
-    <button type="submit">Submit Review</button>
-  </form>
-  <p id="msg"></p>
+<div class="item-card">
+<img src="images/kiwi.png">
+<p>Kiwi – ₹90/pc</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Kiwi" class="order-btn">Order on WhatsApp</a>
+</div>
+
+<div class="item-card">
+<img src="images/dragonfruit.jpg">
+<p>Dragon Fruit – ₹320/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Dragon%20Fruit" class="order-btn">Order on WhatsApp</a>
+</div>
+
+</div>
+</div>
+
+<!-- DAILY VEGGIES -->
+<div class="category">
+<button onclick="toggleBox('veggies')">Daily Veggies</button>
+<div class="items" id="veggies">
+
+<div class="item-card">
+<img src="images/tomato.jpeg">
+<p>Tomato – ₹40/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order on WhatsApp</a>
+</div>
+
+<div class="item-card">
+<img src="images/potato.jpeg">
+<p>Potato – ₹30/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order on WhatsApp</a>
+</div>
+
+</div>
+</div>
+
+<!-- SEASONAL FRUITS -->
+<div class="category">
+<button onclick="toggleBox('seasonal')">Seasonal Fruits</button>
+<div class="items" id="seasonal">
+
+<div class="item-card">
+<img src="images/Mango.png">
+<p>Mango – ₹200/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Mango" class="order-btn">Order on WhatsApp</a>
+</div>
+
+<div class="item-card">
+<img src="images/orange.png">
+<p>Orange – ₹140/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order on WhatsApp</a>
+</div>
+
+</div>
+</div>
+
 </section>
 
 <footer>
-© 2026 Baba Shyam Fruit | Andheri East, Mumbai
+© 2026 Baba Shyam Fruit | Andheri East
 </footer>
 
-<a href="https://wa.me/917506894309" class="float-whatsapp">💬</a>
+<a href="https://wa.me/917506224787" class="float-whatsapp">💬</a>
 
 <script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbxNtgBm8zMm-pwcOUD805DzpYF8y9rpF5Ro6BNvaf7zu6U0VClqXTAxGYIcyEqKHFlG/exec";
+let slideIndex = 0;
+let textIndex = 0;
 
-document.getElementById("reviewForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+function showSlides() {
+  let slides = document.getElementsByClassName("slides");
+  let texts = document.getElementsByClassName("text-slide");
 
-  fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify({
-      name: document.getElementById("name").value,
-      review: document.getElementById("review").value
-    })
-  })
-  .then(res => res.json())
-  .then(() => {
-    document.getElementById("msg").innerText = "Thank you for your review 🙏";
-    document.getElementById("reviewForm").reset();
-  })
-  .catch(() => {
-    document.getElementById("msg").innerText = "Something went wrong!";
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    texts[i].classList.remove("active");
+  }
+
+  slideIndex++;
+  textIndex++;
+
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (textIndex > texts.length) textIndex = 1;
+
+  slides[slideIndex - 1].style.display = "block";
+  texts[textIndex - 1].classList.add("active");
+
+  setTimeout(showSlides, 6000);
+}
+showSlides();
+
+function toggleBox(id) {
+  let all = document.querySelectorAll(".items");
+  all.forEach(el => el.style.display = "none");
+  document.getElementById(id).style.display = "grid";
+}
+</script>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slides');
+const texts = document.querySelectorAll('.text-slide');
+
+function startSlider() {
+
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active', 'prev');
+
+    if (i === current - 1 || (current === 0 && i === slides.length - 1)) {
+      slide.classList.add('prev');
+    }
   });
-});
+
+  slides[current].classList.add('active');
+
+  texts.forEach(t => t.classList.remove('active'));
+  texts[current].classList.add('active');
+
+  current = (current + 1) % slides.length;
+}
+
+startSlider();
+setInterval(startSlider, 6000);
 </script>
 
 </body>
