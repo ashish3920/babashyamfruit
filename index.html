@@ -50,11 +50,46 @@
     <div class="review">"Reasonable rates & good service." – Imran</div>
 </section>
 
+<!-- ADD REVIEW FORM -->
+<section id="add-review">
+  <h2>Write Your Review</h2>
+  <form id="reviewForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="review" placeholder="Write your review..." required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+  <p id="msg"></p>
+</section>
+
 <footer>
 © 2026 Baba Shyam Fruit | Andheri East, Mumbai
 </footer>
 
 <a href="https://wa.me/917506894309" class="float-whatsapp">💬</a>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbxNtgBm8zMm-pwcOUD805DzpYF8y9rpF5Ro6BNvaf7zu6U0VClqXTAxGYIcyEqKHFlG/exec";
+
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify({
+      name: document.getElementById("name").value,
+      review: document.getElementById("review").value
+    })
+  })
+  .then(res => res.json())
+  .then(() => {
+    document.getElementById("msg").innerText = "Thank you for your review 🙏";
+    document.getElementById("reviewForm").reset();
+  })
+  .catch(() => {
+    document.getElementById("msg").innerText = "Something went wrong!";
+  });
+});
+</script>
 
 </body>
 </html>
