@@ -5,6 +5,7 @@
 <title>Categories | Baba Shyam Fruit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -12,13 +13,44 @@
 <!-- HEADER -->
 <header class="logo-header">
   <img src="images/logo.png" class="logo-img">
-  <p>Fruits & Vegetables Categories</p>
+</header>
+<header>
+  <div style="
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:teal;
+  color:white;
+  padding:10px 15px;
+  
+">
+
+  <div 
+    onclick="toggleMenu()" 
+    style="
+      font-size:26px;
+      cursor:pointer;
+      user-select:none;
+    ">
+    ☰
+  </div>
+  <p style="
+    margin:0;
+    font-size:16px;
+    font-weight:500;
+  ">
+    Fresh & Quality Fruits and Veggies
+  </p>
+
+</div>
+  
+  
 </header>
 
 <!-- NAV -->
-<nav>
+<nav id="menu">
   <a href="index.html">Home</a>
-  <a href="fruits.html">Fruits</a>
+ <!-- <a href="fruits.html">Fruits</a>-->
   <a href="categories.html">Categories</a>
   <a href="contact.html">Contact</a>
 </nav>
@@ -41,7 +73,7 @@
 <div class="item-card">
 <img src="images/banana.png">
 <p>Banana – ₹60/dozen</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Banana" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Banana" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -55,13 +87,13 @@
 <div class="item-card">
 <img src="images/kiwi.png">
 <p>Kiwi – ₹90/pc</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Kiwi" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Kiwi" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/dragonfruit.jpg">
 <p>Dragon Fruit – ₹320/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Dragon%20Fruit" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Dragon%20Fruit" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -75,13 +107,13 @@
 <div class="item-card">
 <img src="images/tomato.jpeg">
 <p>Tomato – ₹40/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/potato.jpeg">
 <p>Potato – ₹30/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -95,13 +127,13 @@
 <div class="item-card">
 <img src="images/Mango.png">
 <p>Mango – ₹200/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Mango" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Mango" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/orange.png">
 <p>Orange – ₹140/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -113,9 +145,10 @@
 
 <div class="item-card">
 <img src="images/fruit-hamper.jpg">
-<p>Standard Fruit Hamper – ₹599</p>
+<p>Standard Fruit Hamper – ₹1299</p>
+<strong> hamper can be customized accordingly & prices may be affected according to it</strong>
 <p><small>Order 2–3 days in advance</small></p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Fruit%20Hamper" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Fruit%20Hamper" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -128,13 +161,13 @@
 <div class="item-card">
 <img src="images/strawberry.jpg">
 <p>Strawberry – ₹250/box</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Strawberry" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Strawberry" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/blueberry.jpg">
 <p>Blueberry – ₹350/box</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Blueberry" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Blueberry" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -147,13 +180,13 @@
 <div class="item-card">
 <img src="images/cucumber.jpg">
 <p>Cucumber – ₹40/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Cucumber" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Cucumber" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/carrot.jpg">
 <p>Carrot – ₹50/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Carrot" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Carrot" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -166,13 +199,13 @@
 <div class="item-card">
 <img src="images/watermelon.jpeg">
 <p>Watermelon – ₹30/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Watermelon" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Watermelon" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/muskmelon.jpg">
 <p>Muskmelon – ₹40/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Muskmelon" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Muskmelon" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -185,13 +218,13 @@
 <div class="item-card">
 <img src="images/apple.png">
 <p>Apple – ₹180/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/orange.png">
 <p>Orange – ₹140/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -204,13 +237,13 @@
 <div class="item-card">
 <img src="images/organic-apple.jpg">
 <p>Organic Apple – ₹220/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Apple" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Apple" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/organic-tomato.jpg">
 <p>Organic Tomato – ₹60/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Tomato" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Tomato" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -223,13 +256,13 @@
 <div class="item-card">
 <img src="images/lemon.jpg">
 <p>Lemon – ₹120/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Lemon" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Lemon" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/sweetlime.jpg">
 <p>Sweet Lime – ₹100/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Sweet%20Lime" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Sweet%20Lime" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -242,13 +275,13 @@
 <div class="item-card">
 <img src="images/spinach.jpg">
 <p>Spinach – ₹30/bunch</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Spinach" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Spinach" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/methi.jpg">
 <p>Methi – ₹25/bunch</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Methi" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Methi" class="order-btn">Order Now</a>
 </div>
 
 </div>
