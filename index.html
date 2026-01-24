@@ -5,22 +5,57 @@
 <title>Baba Shyam Fruit | Andheri East</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
 </head>
 
 <body>
 
 <header class="logo-header">
   <img src="images/logo.png" class="logo-img">
-  <p>Fresh & Quality Fruits – Andheri East</p>
+  </header> 
+  <header>
+  <div style="
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:teal;
+  color:white;
+  padding:10px 15px;  
+  
+  
+">
+
+  <div 
+    onclick="toggleMenu()" 
+    style="
+      font-size:26px;
+      cursor:pointer;
+      user-select:none;
+    ">
+    ☰
+  </div>
+  
+    <p style="
+    margin:0;
+    font-size:16px;
+    font-weight:500;
+  ">
+    Fresh & Quality Fruits and Veggies
+  </p>
+
+</div>
+  
+  
 </header>
 
+
 <div class="festival">
-🌼 Jai Shri Krishna 🌼 Fresh & Seasonal Fruits Available
+🌼 Jai Shri Krishna 🌼 Fresh & Seasonal Fruits and Veggies Available
 </div>
 
-<nav>
+<nav id="menu">
   <a href="index.html">Home</a>
-  <a href="fruits.html">Fruits</a>
+ <!-- <a href="fruits.html">Fruits</a>-->
   <a href="categories.html">Categories</a>
   <a href="contact.html">Contact</a>
 </nav>
@@ -50,7 +85,7 @@
 
 <!-- DAILY FRUITS -->
 <section class="daily-section">
-<h2>🍎 Daily Fruits</h2>
+<h2>🍎 Daily Fruits & 🥔Vegetables</h2>
 
 <!-- EVERYDAY FRUITS -->
 <div class="category">
@@ -60,13 +95,13 @@
 <div class="item-card">
 <img src="images/apple.png">
 <p>Apple – ₹180/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/banana.png">
 <p>Banana – ₹60/dozen</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Banana" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Banana" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -80,13 +115,13 @@
 <div class="item-card">
 <img src="images/kiwi.png">
 <p>Kiwi – ₹90/pc</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Kiwi" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Kiwi" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/dragonfruit.jpg">
 <p>Dragon Fruit – ₹320/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Dragon%20Fruit" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Dragon%20Fruit" class="order-btn">Order Now</a>
 </div>
 
 </div>
@@ -100,14 +135,108 @@
 <div class="item-card">
 <img src="images/tomato.jpeg">
 <p>Tomato – ₹40/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
 <img src="images/potato.jpeg">
 <p>Potato – ₹30/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order Now</a>
 </div>
+
+</div>
+</div>
+
+<!-- SEASONAL FRUITS -->
+<div class="category">
+<button onclick="toggleBox('seasonal')">Seasonal Fruits</button>
+<div class="items" id="seasonal">
+
+<div class="item-card">
+<img src="images/Mango.png">
+<p>Mango – ₹200/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Mango" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/orange.png">
+<p>Orange – ₹140/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Baba Shyam Fruit | Andheri East
+</footer>
+
+<a href="https://wa.me/917506224787" class="float-whatsapp">💬</a>
+
+<script>
+let slideIndex = 0;
+let textIndex = 0;
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slides");
+  let texts = document.getElementsByClassName("text-slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    texts[i].classList.remove("active");
+  }
+
+  slideIndex++;
+  textIndex++;
+
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (textIndex > texts.length) textIndex = 1;
+
+  slides[slideIndex - 1].style.display = "block";
+  texts[textIndex - 1].classList.add("active");
+
+  setTimeout(showSlides, 6000);
+}
+showSlides();
+
+function toggleBox(id) {
+  let all = document.querySelectorAll(".items");
+  all.forEach(el => el.style.display = "none");
+  document.getElementById(id).style.display = "grid";
+}
+</script>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slides');
+const texts = document.querySelectorAll('.text-slide');
+
+function startSlider() {
+
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active', 'prev');
+
+    if (i === current - 1 || (current === 0 && i === slides.length - 1)) {
+      slide.classList.add('prev');
+    }
+  });
+
+  slides[current].classList.add('active');
+
+  texts.forEach(t => t.classList.remove('active'));
+  texts[current].classList.add('active');
+
+  current = (current + 1) % slides.length;
+}
+
+startSlider();
+setInterval(startSlider, 6000);
+</script>
+
+</body>
+</html></div>
 
 </div>
 </div>
