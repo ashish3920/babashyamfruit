@@ -10,9 +10,52 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="logo-header">
-  <img src="images/logo.png" class="logo-img">
+  <div style="
+  display:flex;
+  align-items:center;
+  gap:14px;
+">
+
+ <!-- LOGO -->
+  <img src="images/logo.png" style="width:65px;border-radius:10px;">
+
+  <!-- BRAND TEXT -->
+  <div style="
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:1.2px;
+    background:linear-gradient(90deg,#00ffd5,#b2ff59);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-transform:uppercase;
+    font-family:'Poppins',system-ui;
+  ">
+    FAL<span style="
+      font-weight:600;
+      font-size:18px;
+      margin-left:4px;
+      letter-spacing:3px;
+      color:#ffd240;
+      -webkit-text-fill-color:#ffd240;
+    ">SABZI</span>
+  </div>
+
+</div>
+<span style="
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(6px);
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  color:white;
+">
+  Fresh • Daily
+</span>
+
+</div>
+
+
 </header>
 <header>
   <div style="
@@ -67,7 +110,7 @@
 <div class="item-card">
 <img src="images/apple.png">
 <p>Apple – ₹180/kg</p>
-<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order on WhatsApp</a>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
@@ -108,6 +151,221 @@
 <img src="images/tomato.jpeg">
 <p>Tomato – ₹40/kg</p>
 <a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/potato.jpeg">
+<p>Potato – ₹30/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Potato" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<!-- SEASONAL FRUITS -->
+<div class="category">
+<button onclick="toggleBox('seasonal')">Seasonal Fruits</button>
+<div class="items" id="seasonal">
+
+<div class="item-card">
+<img src="images/Mango.png">
+<p>Mango – ₹200/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Mango" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/orange.png">
+<p>Orange – ₹140/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('hampers')">Fruit Hampers</button>
+<div class="items" id="hampers">
+
+<div class="item-card">
+<img src="images/fruit-hamper.jpg">
+<p>Standard Fruit Hamper – ₹1299</p>
+<strong> hamper can be customized accordingly & prices may be affected according to it</strong>
+<p><small>Order 2–3 days in advance</small></p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Fruit%20Hamper" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('berries')">Berries & Exotic Fruits</button>
+<div class="items" id="berries">
+
+<div class="item-card">
+<img src="images/strawberry.jpg">
+<p>Strawberry – ₹250/box</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Strawberry" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/blueberry.jpg">
+<p>Blueberry – ₹350/box</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Blueberry" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('salad')">Salad Vegetables</button>
+<div class="items" id="salad">
+
+<div class="item-card">
+<img src="images/cucumber.jpg">
+<p>Cucumber – ₹40/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Cucumber" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/carrot.jpg">
+<p>Carrot – ₹50/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Carrot" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('summer')">Summer Special Fruits</button>
+<div class="items" id="summer">
+
+<div class="item-card">
+<img src="images/watermelon.jpeg">
+<p>Watermelon – ₹30/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Watermelon" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/muskmelon.jpg">
+<p>Muskmelon – ₹40/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Muskmelon" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('winter')">Winter Special Fruits</button>
+<div class="items" id="winter">
+
+<div class="item-card">
+<img src="images/apple.png">
+<p>Apple – ₹180/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Apple" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/orange.png">
+<p>Orange – ₹140/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Orange" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('organic')">Organic Fruits & Veggies</button>
+<div class="items" id="organic">
+
+<div class="item-card">
+<img src="images/organic-apple.jpg">
+<p>Organic Apple – ₹220/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Apple" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/organic-tomato.jpg">
+<p>Organic Tomato – ₹60/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Organic%20Tomato" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('citrus')">Citrus Fruits</button>
+<div class="items" id="citrus">
+
+<div class="item-card">
+<img src="images/lemon.jpg">
+<p>Lemon – ₹120/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Lemon" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/sweetlime.jpg">
+<p>Sweet Lime – ₹100/kg</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Sweet%20Lime" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('leafy')">Leafy Vegetables</button>
+<div class="items" id="leafy">
+
+<div class="item-card">
+<img src="images/spinach.jpg">
+<p>Spinach – ₹30/bunch</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Spinach" class="order-btn">Order Now</a>
+</div>
+
+<div class="item-card">
+<img src="images/methi.jpg">
+<p>Methi – ₹25/bunch</p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Methi" class="order-btn">Order Now</a>
+</div>
+
+</div>
+</div>
+
+<div class="category">
+<button onclick="toggleBox('bulk')">Party & Bulk Orders</button>
+<div class="items" id="bulk">
+
+<div class="item-card">
+<img src="images/bulk-fruits.jpg">
+<p>Bulk Fruit Orders – Special Rates</p>
+<p><small>Contact us on WhatsApp</small></p>
+<a href="https://wa.me/917506224787?text=I%20want%20to%20place%20a%20bulk%20fruit%20order" class="order-btn">
+Contact on WhatsApp
+</a>
+</div>
+
+</div>
+</div>
+
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Baba Shyam Fruit | Andheri East
+</footer>
+
+<a href="https://wa.me/917506224787" class="float-whatsapp">💬</a>
+
+<!-- TOGGLE SCRIPT -->
+<script>
+function toggleBox(id) {
+  const box = document.getElementById(id);
+  box.style.display = box.style.display === "grid" ? "none" : "grid";
+}
+</script>
+
+</body>
+</html><a href="https://wa.me/917506224787?text=I%20want%20to%20order%20Tomato" class="order-btn">Order Now</a>
 </div>
 
 <div class="item-card">
