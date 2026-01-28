@@ -5,18 +5,22 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  background-color: #F8F9F4;
+  color: #2E2E2E;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ================= HEADER ================= */
+
+
 .logo-header {
-  background: linear-gradient(135deg, #2e7d32, #66bb6a);
-  color: white;
+  background-color: #6B8E7E;
+  color: #FFFFFF;
   padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .logo-header p {
@@ -29,11 +33,13 @@ body {
 
 /* ================= NAVIGATION ================= */
 nav {
-  background: #1e5631;
+  background:#0B3D2E;
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 10px 20px;
+   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a {
@@ -44,8 +50,9 @@ nav a {
 }
 
 nav a:hover {
-  background: #2e7d32;
+  background:#2ECC71;
   border-radius: 5px;
+  color:#C2B280;
 }
 
 /* ================= HAMBURGER ================= */
@@ -104,10 +111,315 @@ nav a:hover {
 
 /* ================= FESTIVAL STRIP ================= */
 .festival {
-  background: #ff7043;
+  background:#FF6F3C;
   color: white;
   text-align: center;
   padding: 10px;
+  font-weight: bold;
+}
+
+/* ================= SLIDER ================= */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  transition: left 1s ease;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slides.active {
+  left: 0;
+}
+
+.slides.prev {
+  left: -100%;
+}
+
+/* ================= SLIDER TEXT ================= */
+.slider-text {
+  background: white;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  text-align: center;
+}
+
+.text-slide {
+  display: none;
+  animation: slideUp 0.8s ease;
+}
+
+.text-slide.active {
+  display: block;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= DAILY SECTION ================= */
+.daily-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.daily-section h2 {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background:#0B3D2E;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* ================= CATEGORY ================= */
+.category {
+  margin-bottom: 15px;
+}
+
+.category button {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 16px;
+  background:#6B8E23;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:all 0.3s ease;
+}
+
+/* ================= ITEMS GRID ================= */
+.items {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  background: #f1f8e9;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition:all 0.3s ease;
+}
+
+.item-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition:all 0.3s ease;
+}
+
+.item-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.order-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+ 
+}
+
+.price {
+  color: #6B7280;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background:#0F0F0F;   /* Charcoal Black */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* ================= FLOAT WHATSAPP ================= */
+.float-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* ================= GENERAL ================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.category button:hover {
+  background: #556B2F;
+  color: #FFFFFF;
+}
+
+/* ================= contact us ================= */
+
+.contact-card {
+  background: white;
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  font-size: 14px;
+  color: #1F2933;
+}
+
+.contact-card p {
+  margin-bottom: 12px;
+  color: #334155;
+  line-height: 1.6;
+  }
+  
+.contact-card iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 10px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.call {
+  background: #0B3D2E;
+  color: white;
+}
+
+/* ================= 2nd header ================= */
+  
+  .categories-top{
+      
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:gold;
+  color:white;
+  padding:10px 15px;
+  }
+  
+  .index-top
+  {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:gold;
+  color:white;
+  padding:10px 15px;   
+  }
+  
+ 
+  .contact-top
+  {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:gold;
+  color:white;
+  padding:10px 15px;  
+      
+  }
+  
+  /* ================= brand text ================= */
+  
+  .brand-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+/* AMIT text */
+.brand-amit {
+  font-size: 19px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #C81D25;
+}
+
+/* FAL SABZI */
+.brand-name {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  background: linear-gradient(90deg,#1F2933,#1F2933);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', system-ui;
+}
+
+.brand-name span {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 4px;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg,#ffd240,#ffb703);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}  padding: 10px;
   font-weight: bold;
 }
 
